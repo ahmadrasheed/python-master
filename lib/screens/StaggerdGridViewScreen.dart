@@ -143,7 +143,7 @@ class XGridItem extends StatelessWidget {
               children: [
 
                 Text(itemData['text1'],style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 26,
                   color: itemData['text1Color'],
                   shadows: [
                     Shadow(

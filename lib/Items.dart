@@ -1,86 +1,191 @@
 import 'package:flutter/material.dart';
 const ItemsData=[
   {
-    "text1":"Variables",
+    "text1":"intro",
     "text1Color":Colors.white,
-    "color":Colors.blue,
+    "color":Color.fromARGB(255,6,189,186),
     "width":200.0,
     "height":100.0,
     "pythonLogo":'assets/images/python150150.png'
 
   },
   {
-    "text1":"OOP",
+    "text1":"Comments",
     "text1Color":Colors.white,
-    "color":Colors.deepPurple,
-    "width":150.0,
+    "color":Color.fromARGB(255,180,10,170),
+    "width":200.0,
     "height":300.0,
     "pythonLogo":'assets/images/python150150.png'
 
   },
   {
-    "text1":"Functions",
+    "text1":"Variables",
     "text1Color":Colors.white,
-    "color":Colors.lightGreen,
-    "width":300.0,
-    "height":150.0,
+    "color":Color.fromARGB(255,244,10,225),
+    "width":200.0,
+    "height":200.0,
     "pythonLogo":'assets/images/python150150.png'
 
   },
   {
-    "text1":"Operators",
+    "text1":"Types",
     "text1Color":Colors.white,
     "color":Colors.deepOrange,
-    "width":170.0,
+    "width":200.0,
     "height":150.0,
     "pythonLogo":'assets/images/python150150.png'
 
   },
   {
-    "text1":"Loops",
+    "text1":"Numbers",
     "text1Color":Colors.white,
-    "color":Colors.cyan,
-    "width":300.0,
+    "color":Color.fromARGB(255,93,0,142),
+    "width":200.0,
     "height":100.0,
     "pythonLogo":'assets/images/python150150.png'
 
   },
   {
-    "text1":"Quiz",
+    "text1":"Random",
     "text1Color":Colors.white,
-    "color":Colors.purple,
-    "width":100.0,
-    "height":120.0,
-    "pythonLogo":'assets/images/python150150.png'
-
-  },
-  {
-    "text1":"Data Types",
-    "text1Color":Colors.white,
-    "color":Colors.pink,
-    "width":120.0,
-    "height":160.0,
+    "color":Color.fromARGB(255,106,147,157),
+    "width":200.0,
+    "height":150.0,
     "pythonLogo":'assets/images/python150150.png'
 
   },
   {
     "text1":"Strings",
     "text1Color":Colors.white,
-    "color":Colors.blue,
-    "width":80.0,
-    "height":130.0,
+    "color":Color.fromARGB(255,106,160,16),
+    "width":200.0,
+    "height":102.0,
     "pythonLogo":'assets/images/python150150.png'
 
   },
   {
-    "text1":"Scopes",
+    "text1":"Slicing String",
     "text1Color":Colors.white,
-    "color":Colors.purpleAccent,
-    "width":120.0,
-    "height":88.0,
+    "color":Color.fromARGB(255,58,119,198),
+    "width":200.0,
+    "height":222.0,
     "pythonLogo":'assets/images/python150150.png'
 
   },
+  {
+    "text1":"Booleans",
+    "text1Color":Colors.white,
+    "color":Color.fromARGB(255,148,2,48),
+    "width":200.0,
+    "height":120.0,
+    "pythonLogo":'assets/images/python150150.png'
+
+  },
+  {
+    "text1":"Operators",
+    "text1Color":Colors.white,
+    "color":Color.fromARGB(255,238,159,43),
+    "width":200.0,
+    "height":100.0,
+    "pythonLogo":'assets/images/python150150.png'
+
+  },
+
+
+  {
+    "text1":"List",
+    "text1Color":Colors.white,
+    "color":Color.fromARGB(255,116,81,157),
+    "width":120.0,
+    "height":252.0,
+    "pythonLogo":'assets/images/python150150.png'
+
+  },
+
+  {
+    "text1":"If..Else",
+    "text1Color":Colors.white,
+    "color":Color.fromARGB(255,17,89,107),
+    "width":120.0,
+    "height":100.0,
+    "pythonLogo":'assets/images/python150150.png'
+
+  },
+
+  {
+    "text1":"While",
+    "text1Color":Colors.white,
+    "color":Color.fromARGB(255,116,152,13),
+    "width":120.0,
+    "height":150.0,
+    "pythonLogo":'assets/images/python150150.png'
+
+  },
+
+  {
+    "text1":"For",
+    "text1Color":Colors.white,
+    "color":Color.fromARGB(255,212,158,1),
+    "width":120.0,
+    "height":200.0,
+    "pythonLogo":'assets/images/python150150.png'
+
+  },
+  {
+    "text1":"Functions",
+    "text1Color":Colors.white,
+    "color":Color.fromARGB(255,52,34,181),
+    "width":120.0,
+    "height":200.0,
+    "pythonLogo":'assets/images/python150150.png'
+
+  },
+  {
+    "text1":"Lambda",
+    "text1Color":Colors.white,
+    "color":Color.fromARGB(255,98,77,163),
+    "width":120.0,
+    "height":100.0,
+    "pythonLogo":'assets/images/python150150.png'
+
+  },
+  {
+    "text1":"Arrays",
+    "text1Color":Colors.white,
+    "color":Color.fromARGB(255,188,41,0),
+    "width":120.0,
+    "height":150.0,
+    "pythonLogo":'assets/images/python150150.png'
+
+  },
+  {
+    "text1":"OOP",
+    "text1Color":Colors.white,
+    "color":Colors.deepOrange,
+    "width":120.0,
+    "height":248.0,
+    "pythonLogo":'assets/images/python150150.png'
+
+  },
+  {
+    "text1":"Iteration",
+    "text1Color":Colors.white,
+    "color":Color.fromARGB(255,99,43,156),
+    "width":120.0,
+    "height":200.0,
+    "pythonLogo":'assets/images/python150150.png'
+
+  },
+
+
+
+
+
+
+
+
+
+
 
 
 ];
