@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:get/get.dart';
+
 import 'package:native_pdf_view/native_pdf_view.dart';
+import 'package:python/screens/quiz/quiz_screen.dart';
+import 'package:python/screens/welcome/welcome_screen.dart';
 import 'package:python/utils/ViewPdf.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
@@ -7,9 +12,9 @@ class PdfViewScreen extends StatelessWidget {
 final int lessonIndex;
   const PdfViewScreen({Key key, this.lessonIndex}) : super(key: key);
   @override
-  void initState() {
-     initState();
-  }
+  // void initState() {
+  //    initState();
+  // }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -136,6 +141,43 @@ final int lessonIndex;
                   {
                     debugPrint("You tapped on item.......  $lessonIndex");
                     return ViewPdf(pdfName: "assets/pdf/iterators.pdf",);
+                  }
+                  break;
+                case 20:
+                  {
+                    debugPrint("You tapped on item. Quiz......  $lessonIndex");
+                    //Get.toNamed('/quiz');
+                    Navigator.push(
+                              context,
+                              new MaterialPageRoute(
+                                  builder: (context) => QuizScreen()));
+
+
+
+
+                    // SchedulerBinding.instance.addPostFrameCallback((_) {
+                    //
+                    //   // add your code here.
+                    //
+                    //   Navigator.push(
+                    //       context,
+                    //       new MaterialPageRoute(
+                    //           builder: (context) => QuizScreen()));
+                    // });
+
+
+                    // WidgetsBinding.instance.addPostFrameCallback((_){
+                    //
+                    //      Navigator.push(
+                    //             context,
+                    //             new MaterialPageRoute(
+                    //                 builder: (context) => WelcomeScreen()));
+                    //
+                    // });
+
+
+
+
                   }
                   break;
 

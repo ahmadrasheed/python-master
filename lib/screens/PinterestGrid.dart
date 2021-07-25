@@ -5,22 +5,55 @@ import 'package:python/custome/BorderBox.dart';
 import 'package:python/db/ImageData.dart';
 import 'package:python/screens/LandingScreen.dart';
 import 'package:python/screens/PdfViewScreen.dart';
+import 'package:python/screens/quiz/quiz_screen.dart';
+import 'package:python/utils/ViewPdf.dart';
 import '../Items.dart';
 import 'package:get/get.dart';
 
-class PinterestGrid extends StatelessWidget {
+class PinterestGrid extends StatefulWidget {
   const PinterestGrid({Key key}) : super(key: key);
 
   @override
+  _PinterestGridState createState() => _PinterestGridState();
+}
+
+class _PinterestGridState extends State<PinterestGrid> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: InkWell(
+        onTap: ()=>{Get.toNamed('/quiz')},
+        child: Container(
+
+          decoration: BoxDecoration(
+              color: Colors.purpleAccent,
+              shape: BoxShape.circle
+          ),
+          height: 100.0,
+          width: 100.0,
+          
+          child: FittedBox(
+            child:Column(
+              mainAxisAlignment:MainAxisAlignment.center,
+              children: [
+                Icon(Icons.outbond)
+
+              ],
+            ) ,
+          ),
+          
+
+            ),
+      ),
+
+
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(2.0),
           child: Container(
             child: Column(
-              
+
               children: [
                 SizedBox(height: 6,),
                 Row(
@@ -95,7 +128,9 @@ class PinterestGrid extends StatelessWidget {
   }
 
   onItemTab(int index) {
+
     Get.to(PdfViewScreen(lessonIndex: index,));
+
   }
 }
 

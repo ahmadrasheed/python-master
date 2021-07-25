@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:python/screens/LandingScreen.dart';
 import 'package:get/get.dart';
 
-import 'package:python/screens/StaggerdGridViewScreen.dart';
+import 'package:python/screens/PinterestGrid.dart';
+import 'package:python/screens/quiz/quiz_screen.dart';
+import 'package:python/screens/welcome/welcome_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +22,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
 
       ),
-      home: PinterestGrid(),    //PinterestGrid()
+      //home: PinterestGrid(),
+      getPages: [
+        GetPage(name: '/', page: () => PinterestGrid()),
+        GetPage(
+            name: '/quiz', page: () => QuizScreen()) // Dynamic route
+      ],//PinterestGrid()
 
     );
 
@@ -40,7 +48,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
-      _counter++;
+     // _counter++;
+      Get.toNamed('/quiz');
     });
   }
 
@@ -56,6 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: Column(
+
 
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
