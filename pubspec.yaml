@@ -28,6 +28,7 @@ dependencies:
   sqflite: any
   path_provider: any
   flutter_svg: ^0.21.0+1
+  auto_size_text: ^2.1.0
 
 
 

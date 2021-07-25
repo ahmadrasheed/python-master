@@ -124,6 +124,7 @@ print('from _question  55555555555555555555555555555555555  ');
       // Once timer is finish go to the next qn
       _animationController.forward().whenComplete(nextQuestion);
     } else {
+
       // Get package provide us simple way to naviigate another page
       Get.to(ScoreScreen());
     }

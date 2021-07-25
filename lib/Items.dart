@@ -176,40 +176,27 @@ const ItemsData=[
     "pythonLogo":'assets/images/python150150.png'
 
   },
-  {
-    "text1":"QUIZ",
-    "text1Color":Colors.white,
-    "color":Color.fromARGB(255,99,43,156),
-    "width":120.0,
-    "height":200.0,
-    "pythonLogo":'assets/images/python150150.png'
-
-  },
-  {
-    "text1":"About us",
-    "text1Color":Colors.white,
-    "color":Color.fromARGB(255,99,43,156),
-    "width":120.0,
-    "height":200.0,
-    "pythonLogo":'assets/images/python150150.png'
-
-  },
-
-
-
-
-
-
-
-
-
-
+  // {
+  //   "text1":"QUIZ",
+  //   "text1Color":Colors.white,
+  //   "color":Color.fromARGB(255,99,43,156),
+  //   "width":120.0,
+  //   "height":200.0,
+  //   "pythonLogo":'assets/images/python150150.png'
+  //
+  // },
+  // {
+  //   "text1":"About us",
+  //   "text1Color":Colors.white,
+  //   "color":Color.fromARGB(255,99,43,156),
+  //   "width":120.0,
+  //   "height":200.0,
+  //   "pythonLogo":'assets/images/python150150.png'
+  //
+  // },
 
 
 ];
-
-
-
 
 
 const RE_DATA  = [

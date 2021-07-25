@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -6,6 +7,7 @@ import 'package:python/db/ImageData.dart';
 import 'package:python/screens/LandingScreen.dart';
 import 'package:python/screens/PdfViewScreen.dart';
 import 'package:python/screens/quiz/quiz_screen.dart';
+import 'package:python/utils/BottomNavBarV2.dart';
 import 'package:python/utils/ViewPdf.dart';
 import '../Items.dart';
 import 'package:get/get.dart';
@@ -21,31 +23,145 @@ class _PinterestGridState extends State<PinterestGrid> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: InkWell(
-        onTap: ()=>{Get.toNamed('/quiz')},
-        child: Container(
+      appBar: AppBar(
+        iconTheme: IconThemeData(
+            color: Colors.black,
+        ),
+        backgroundColor: Colors.white,
+         centerTitle: true,
+         title:     Text("Learn Python",
+             style: TextStyle(color: Colors.purple, fontSize: 30,
+               shadows: [
+                 Shadow(
+                   blurRadius: 0.5,
+                   color: Colors.black,
+                   offset: Offset(0.9, 0.9),
+                 ),
+               ],)),
+       // backgroundColor: Colors.transparent,
+        elevation: 0,
+        foregroundColor: Colors.black,
+        //leading: Icon(Icons.email),
+      ),
+      drawer: Drawer(
 
-          decoration: BoxDecoration(
-              color: Colors.purpleAccent,
-              shape: BoxShape.circle
-          ),
-          height: 100.0,
-          width: 100.0,
-          
-          child: FittedBox(
-            child:Column(
-              mainAxisAlignment:MainAxisAlignment.center,
-              children: [
-                Icon(Icons.outbond)
-
-              ],
-            ) ,
-          ),
-          
-
+        child: ListView(
+          // Important: Remove any padding from the ListView.
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            Container(
+              height: 300,width:double.infinity,
+              decoration: BoxDecoration(
+                color: Colors.purple
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.black12,
+                      radius: 50,
+                        child: (
+                        Text('Ghofran',style: TextStyle(fontSize: 22.0,
+                          shadows: [
+                          Shadow(
+                          blurRadius: 0.5,
+                          color: Colors.black,
+                          offset: Offset(0.9, 0.9),
+                        )],))
+                        ),
+                      ),
+                      CircleAvatar(
+                        backgroundColor: Colors.black12,
+                        radius: 50,
+                        child: (
+                            Text('Haneen',style: TextStyle(fontSize: 22.0,
+                                shadows: [
+                              Shadow(
+                                blurRadius: 0.5,
+                                color: Colors.black,
+                                offset: Offset(0.9, 0.9),
+                              ),
+                            ]))
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ),
+
+
+            ListTile(
+              leading: Icon(Icons.home,color: Colors.purple), title: Text("Home"),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.settings,color: Colors.purple,), title: Text("Settings"),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.contacts,color: Colors.purple), title: Text("Contact Us"),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.info_outline,color: Colors.purple,), title: Text("Resources"),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            Container(
+              padding: EdgeInsets.all(16.0),
+              height: 300,width:double.infinity,
+              decoration: BoxDecoration(
+                  color: Colors.white12,
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
+                    //mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Flexible(
+                        child: Text('This app was developed by Ghofran Atheer & Haneen Saad and supervised by ِA.L ِZainab Khaldoon',
+                          maxLines: 5,
+                          softWrap: true,
+                          overflow: TextOverflow.visible,
+                          style: TextStyle(
+                            color: Colors.black87,
+                              fontSize: 16.0,
+                          ),
+                            textAlign: TextAlign.center,
+
+                        ),
+                      ),
+                      ],
+                  )
+                ],
+              ),
+            ),
+
+          ],
+
+        ),
+
       ),
 
+
+    floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.purple,
+        onPressed: (){Get.to(QuizScreen());},
+        child: Container(child: Text('Quiz')),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterFloat,
 
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -56,40 +172,12 @@ class _PinterestGridState extends State<PinterestGrid> {
 
               children: [
                 SizedBox(height: 6,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    BorderBox(
-                      child: Icon(
-                        Icons.menu,
-                        color: Colors.purple,
-                      ),
-                      height: 40,
-                      width: 40,
-                    ),
-                    BorderBox(
-                      child: Icon(
-                        Icons.settings,
-                        color: Colors.purple,
-                      ),
-                      height: 40,
-                      width: 40,
-                    )
-                  ],
-                ),
+
                 SizedBox(
                   height: 1,
                 ),
 
-                Text("Learn Python",
-                    style: TextStyle(color: Colors.purple, fontSize: 30,
-                      shadows: [
-                        Shadow(
-                          blurRadius: 0.5,
-                          color: Colors.black,
-                          offset: Offset(0.9, 0.9),
-                        ),
-                      ],)),
+
                 Divider(color: Colors.purple),
                 SingleChildScrollView(
                   physics: BouncingScrollPhysics(),
@@ -118,7 +206,10 @@ class _PinterestGridState extends State<PinterestGrid> {
                     crossAxisSpacing: 2.0,
                     physics: BouncingScrollPhysics(),
                   ),
+
+
                 ),
+
               ],
             ),
           ),

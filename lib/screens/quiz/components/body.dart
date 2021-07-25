@@ -20,7 +20,7 @@ class Body extends StatelessWidget {
     QuestionController _questionController = Get.put(QuestionController());
     return Stack(
       children: [
-        SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.fill),
+        //SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.cover),
         SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,7 +42,7 @@ class Body extends StatelessWidget {
                       style: Theme.of(context)
                           .textTheme
                           .headline4
-                          .copyWith(color: kSecondaryColor),
+                          .copyWith(color: Colors.purple),
                       children: [
                         TextSpan(
                           text: "/${_questionController.questions.length}",
